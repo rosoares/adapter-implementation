@@ -1,7 +1,7 @@
 <?php
 
 
-class MarketplaceXML
+class MarketplaceJSON
 {
     public string $ENDPOINT;
 
