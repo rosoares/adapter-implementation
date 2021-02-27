@@ -4,6 +4,8 @@ use PHPUnit\Framework\TestCase;
 use Lib\MarketplaceXML\Client;
 use Lib\MarketplaceJSON\Handler;
 use Src\Order;
+use Src\MarketPlaceJSONAdapter;
+use Src\MarketplaceXMLAdapter;
 
 class Test extends TestCase
 {

@@ -6,8 +6,8 @@ namespace Src;
 
 class Order
 {
-    public function update($param)
+    public function update(Updateable $updateable)
     {
-        return false;
+        return $updateable->updateOrder();
     }
 }

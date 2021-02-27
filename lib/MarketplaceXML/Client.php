@@ -2,7 +2,7 @@
 
 namespace Lib\MarketplaceXML;
 
-use Lib\MarketplaceJSON\Order;
+use Lib\MarketplaceXML\Order;
 
 class Client
 {

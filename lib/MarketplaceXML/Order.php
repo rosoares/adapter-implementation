@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lib\MarketplaceJSON;
+namespace Lib\MarketplaceXML;
 
 
 class Order
