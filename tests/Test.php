@@ -1,24 +1,33 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Src\Order;
+use Lib\MarketplaceJSON;
+use Lib\MarketplaceXML;
 
 class Test extends TestCase
 {
     private string $payload;
 
-    private Order $order;
+    private MarketplaceJSON $marketPlaceJson;
+
+    private MarketplaceXML $marketPlaceXML;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->order = new Order();
+        $this->marketPlaceJson = new MarketplaceJSON();
+
+        $this->marketPlaceXML = new MarketplaceXML();
     }
 
     public function test_can_update_order_by_xml()
     {
         $xml = $this->getXMLPayload();
+
+        $this->marketPlaceXML->auth('test', '123456');
+
+
     }
 
     public function test_can_update_order_by_json()

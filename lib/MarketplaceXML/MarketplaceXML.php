@@ -1,5 +1,6 @@
 <?php
 
+namespace Lib\MarketplaceJSON;
 
 class MarketplaceXML
 {
@@ -9,6 +10,11 @@ class MarketplaceXML
     public function auth($user, $pass)
     {
         echo 'Authenticate user by basic';
+    }
+
+    public function setOrder(string $xml)
+    {
+        echo 'Setting XML order';
     }
 
     public function putOrder(string $xml)
