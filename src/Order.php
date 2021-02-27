@@ -6,7 +6,7 @@ namespace Src;
 
 class Order
 {
-    public function update()
+    public function update($param)
     {
         return false;
     }

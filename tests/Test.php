@@ -3,6 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use Lib\MarketplaceXML\Client;
 use Lib\MarketplaceJSON\Handler;
+use Src\Order;
 
 class Test extends TestCase
 {
@@ -12,6 +13,8 @@ class Test extends TestCase
 
     private Client $marketPlaceXML;
 
+    private Order $order;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -19,6 +22,8 @@ class Test extends TestCase
         $this->marketPlaceJson = new Handler();
 
         $this->marketPlaceXML = new Client();
+
+        $this->order = new Order();
     }
 
     public function test_can_update_order_by_xml()
@@ -27,12 +32,24 @@ class Test extends TestCase
 
         $this->marketPlaceXML->auth('test', '123456');
 
+        $marketPlaceXMLAdapter = new MarketplaceXMLAdapter($this->marketPlaceXML, $xml);
 
+        $created = $this->order->update($marketPlaceXMLAdapter);
+
+        $this->assertTrue($created);
     }
 
     public function test_can_update_order_by_json()
     {
         $json = $this->getJSONPayoload();
+        
+        $this->marketPlaceJson->auth('$25k5daskdap*(12!30ao__');
+
+        $marketPlaceJsonAdapter = new MarketPlaceJSONAdapter($this->marketPlaceJson, $json);
+
+        $created = $this->order->update($marketPlaceJsonAdapter);
+
+        $this->assertTrue($created);
     }
 
     protected function getXMLPayload(): string
