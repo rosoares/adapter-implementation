@@ -2,6 +2,8 @@
 
 namespace Lib\MarketplaceXML;
 
+use Lib\MarketplaceJSON\Order;
+
 class Client
 {
     public string $ENDPOINT;
@@ -12,12 +14,7 @@ class Client
         echo 'Authenticate user by basic';
     }
 
-    public function setOrder(string $xml)
-    {
-        echo 'Setting XML order';
-    }
-
-    public function putOrder(string $xml)
+    public function putOrder(Order $order)
     {
         echo 'Sending order to marketplace';
 

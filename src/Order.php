@@ -6,5 +6,8 @@ namespace Src;
 
 class Order
 {
-    public function update(string )
+    public function update()
+    {
+        return false;
+    }
 }
