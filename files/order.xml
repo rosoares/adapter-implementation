@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<order>
+    <amount>289.00</amount>
+    <discount>9.00</discount>
+    <buyer>
+        <id>02659</id>
+        <name>XML Test Buyer</name>
+    </buyer>
+    <seller>
+        <id>02158</id>
+        <name>XML Test Seller</name>
+    </seller>
+</order>

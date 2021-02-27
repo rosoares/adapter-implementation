@@ -1,0 +1,12 @@
+{
+  "order": {
+    "client": {
+      "name": "JSON Client"
+    },
+    "seller": {
+      "name": "JSON Seller"
+    },
+    "value": "689.88",
+    "discountValue": "0"
+  }
+}
