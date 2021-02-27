@@ -1,24 +1,24 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Lib\MarketplaceJSON;
-use Lib\MarketplaceXML;
+use Lib\MarketplaceXML\Client;
+use Lib\MarketplaceJSON\Handler;
 
 class Test extends TestCase
 {
     private string $payload;
 
-    private MarketplaceJSON $marketPlaceJson;
+    private Handler $marketPlaceJson;
 
-    private MarketplaceXML $marketPlaceXML;
+    private Client $marketPlaceXML;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->marketPlaceJson = new MarketplaceJSON();
+        $this->marketPlaceJson = new Handler();
 
-        $this->marketPlaceXML = new MarketplaceXML();
+        $this->marketPlaceXML = new Client();
     }
 
     public function test_can_update_order_by_xml()

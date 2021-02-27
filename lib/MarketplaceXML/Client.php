@@ -1,8 +1,8 @@
 <?php
 
-namespace Lib\MarketplaceJSON;
+namespace Lib\MarketplaceXML;
 
-class MarketplaceXML
+class Client
 {
     public string $ENDPOINT;
 

@@ -2,7 +2,7 @@
 
 namespace Lib\MarketplaceJSON;
 
-class MarketplaceJSON
+class Handler
 {
     public string $ENDPOINT;
 
